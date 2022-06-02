@@ -23,6 +23,7 @@ body {
 }
 
 h1, h2 {
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -213,8 +214,8 @@ a:hover {
 }
 
 .card {
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 500px;
     margin: 3rem 0 0 0;
     background-image: url('./room.jpg');
     background-position: center;
@@ -230,7 +231,7 @@ a:hover {
 }
 
 .card-text {
-    width: 50%;
+    width: 40%;
     text-align: justify;
     font-size: 24px;
     font-family: sans-serif;
@@ -251,12 +252,21 @@ a:hover {
 .card-wrapper::before {
     content: '';
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 400px;
     display: block;
     border: 2px solid #ffffff;
     opacity: 0;
     transition: 0.3s;
+}
+
+.link {
+    text-decoration: none;
+}
+
+#seta {
+    height: 50px;
+    width: 50px;
 }
 
 /* ANIMAÇÃO DOS TEXTOS */
@@ -278,16 +288,16 @@ a:hover {
 } 
 
 /* MOSTRANDO UM QUADRADO COMO EFEITO DE ANIMAÇÃO QUANDO PASSAR O MOUSE NA IMAGEM */
-.card:hover > .card-wrapper::before {
+.card:hover > .card-wrapper::before { /* MUDA O FORMATO DO QUADRADO INTERNO */
     opacity: 1;
-    width: 350px;
-    height: 250px;
+    width: 450px;
+    height: 350px;
 }
 
 
 /* MOSTRANDO O TEXTO JUNTO COM A ANIMAÇÃO QUANDO PASSAMOS O MOUSE POR CIMA */
 .card:hover > .card-wrapper p {
-    font-size: 24px;
+    font-size: 30px;
     opacity: 1;
     visibility: visible;
 }
@@ -306,6 +316,12 @@ a:hover {
 
 /* RESPONSIVIDADE DA PÁGINA */
 @media (max-width: 800px) {
+    h1, h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }    
+
     .social-media {
          display: flex;
          flex-direction: column;
@@ -326,8 +342,8 @@ a:hover {
     }
 
     .card {
-        height: 250px;
-        width: 250px;
+        height: 300px;
+        width: 300px;
     }
 
     .card-text {
@@ -338,8 +354,29 @@ a:hover {
     }
 
     .card:hover > .card-wrapper::before {
-        height: 190px;
-        width: 190px;
+        height: 255px;
+        width: 255px;
+    }
+
+    .card-text {
+        width: 80%;
+        text-align: justify;
+        font-size: 15px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        color: rgb(109, 109, 109); 
+    }
+
+    .card:hover > .card-wrapper h2 {
+        font-size: 28px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .card:hover > .card-wrapper p {
+        font-size: 25px;
+        opacity: 1;
+        visibility: visible;
     }
 
     .footer {
